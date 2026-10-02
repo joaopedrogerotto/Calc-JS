@@ -36,8 +36,11 @@ input.addEventListener('keydown', function(event){
 });
 
 function calculate(){
+    resultInput.value = 'ERROR';
+    resultInput.classList.add('error');
     const result = eval(input.value);
-    resultInput.value = result
+    resultInput.value = result;
+    resultInput.classList.remove('error');
 }
 
 document.getElementById('copyToClipboard').addEventListener('click',function(event){
